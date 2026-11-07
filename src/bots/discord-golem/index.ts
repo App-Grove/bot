@@ -39,6 +39,14 @@ const settings = {
     },
 };
 
+// Botのトークンを環境変数から取得
+const token = process.env.DISCORD_GOLEM_TOKEN;
+
+if (!token) {
+    console.error('DISCORD_GOLEM_TOKENが設定されていません。');
+    process.exit(1);
+}
+
 // ロールを保存する変数
 let role: Role | null = null;
 // ログチャンネルを保存する変数
@@ -78,6 +86,6 @@ client.once(Events.ClientReady, readyClient => {
 });
 
 // Botを起動
-client.login(settings.general.token).catch(error => {
+client.login(token).catch(error => {
     console.error('ログイン中にエラーが発生しました:', error);
 });

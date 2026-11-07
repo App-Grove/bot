@@ -3,7 +3,6 @@
 
 export type Config = {
     general: {
-        token: string;
         log_channel_id: string;
     };
     verification: {
