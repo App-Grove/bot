@@ -11,5 +11,9 @@
   },
   "peerDependencies": {
     "typescript": "^7"
+  },
+  "dependencies": {
+    "discord.js": "^14.28.1",
+    "smol-toml": "^1.9.1"
   }
 }
