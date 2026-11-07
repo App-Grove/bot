@@ -1,8 +1,7 @@
 import { fork } from 'node:child_process';
 
 const bots = {
-    'Bot A': './bots/bot-a/index.js',
-    'Bot B': './bots/bot-b/index.js',
+    'Discord Golem': './bots/discord-golem/index.ts',
 } satisfies Record<string, string>;
 
 for (const [name, scriptPath] of Object.entries(bots)) {
